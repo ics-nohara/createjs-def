@@ -147,6 +147,8 @@ function formatTypescript(model, easeljsPath) {
 		 + "\t\tstatic manifest: Object[];\n"
 		 + "\t}\n\n";
 
+	out += "\texport var ssMetadata:any[];\n\n";
+
 	for(var i in model.classes) {
 		var classDef = model.classes[i];
 		
