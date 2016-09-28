@@ -168,10 +168,6 @@ function formatTypescript(model, easeljsPath) {
 		out += "\t}\n\n";
 	}
 
-	out = "/// <reference path=\"" + easeljsPath + "\" />\n\n"
-	    + "declare module " + model.namespaces[0] + " {\n\n" 
-	    + out 
-	    + "}\n";
 	return out;
 }
 
@@ -225,7 +221,7 @@ function formatHaxe(model) {
 		out += "extern class " + cname + " extends " + bname + " {\n";
 
 		if (classDef.bounds) {
-			out += "\tstatic public var nominalBounds:Rectangle;\n";
+			out += "\tnominalBounds:Rectangle;\n";
 			importType("Rectangle");
 		}
 
