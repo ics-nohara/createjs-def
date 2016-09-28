@@ -157,7 +157,7 @@ function formatTypescript(model, easeljsPath) {
 		out += "\texport class " + cname + " extends " + bname + " {\n";
 
 		if (classDef.bounds) {
-			out += "\t\tstatic nominalBounds: createjs.Rectangle;\n";
+			out += "\t\tnominalBounds: createjs.Rectangle;\n";
 		}
 
 		for(var j in classDef.children) {
