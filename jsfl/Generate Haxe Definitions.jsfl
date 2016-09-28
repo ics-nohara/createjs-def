@@ -168,6 +168,9 @@ function formatTypescript(model, easeljsPath) {
 		out += "\t}\n\n";
 	}
 
+	out = "declare module " + model.namespaces[0] + " {\n\n"
+	    + out 
+	    + "}\n";
 	return out;
 }
 
