@@ -139,16 +139,6 @@ function formatTypescript(model, easeljsPath) {
 		else return cname;
 	}
 
-	out += "\texport class properties implements Object {\n"
-		 + "\t\tstatic width: number;\n"
-		 + "\t\tstatic height: number;\n"
-		 + "\t\tstatic fps: number;\n"
-		 + "\t\tstatic color: string;\n"
-		 + "\t\tstatic manifest: Object[];\n"
-		 + "\t}\n\n";
-
-	out += "\texport var ssMetadata:any[];\n\n";
-
 	for(var i in model.classes) {
 		var classDef = model.classes[i];
 		
